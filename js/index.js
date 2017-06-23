@@ -28,7 +28,7 @@ for (var i = 0; i < channel.length; i++) {
     console.log(channel[i]);
     console.log(display_name);
     status = 'OFFLINE';
-   $('.channels').append("<div><div class='col-md-4'><img src="+ logo +"></div><div class='col-md-4'>" + display_name+ "</div><div class='col-md-4'>" + status+ "</div></div>");
+   $('.channels').append("<div class='chan col-md-12'><div class='col-md-4'><img src="+ logo +" ></div><div class='col-md-4'>" + display_name+ "</div><div class='col-md-4'>" + status+ "</div></div>");
   }
 
   // $('.channels').append("<div><div class='col-md-4'><img src="+ logo +"></div><div class='col-md-4'>" + display_name+ "</div><div class='col-md-4'>" + status+ "</div></div>");

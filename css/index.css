@@ -1,0 +1,15 @@
+img{
+  height: 70px;
+  width: 70px;
+  margin: 20px;
+}
+.channel{
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+}
+
+.channel h3 {
+  height: 20px;
+padding-top: 20px;
+}
