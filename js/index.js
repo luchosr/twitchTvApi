@@ -1,19 +1,46 @@
 console.log('funciona');
 
 $(document).ready(function(){
-var channel = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
-var urlChannel = 'https://crossorig.in/https://wind-bow.glitch.me/twitch-api/streams/';
-var logo, display_name, status;
-for (var i = 0; i < channel.length; i++) {
- urlChannel = urlChannel + channel[i];
+const cid = "k1jg9vui6ypr4k1licjikiaijqj187";
+const chaArray = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "NorthKorea", "Michael"];
+let channelFreeCode = chaArray[3];
+const channel2 = chaArray[0];
+let urlChannel = 'https://api.twitch.tv/kraken/users/44322889?client_id=XXXXX';
+let logo, display_name, status;
+const url1 = "https://api.twitch.tv/kraken/streams/" + channelFreeCode + "?client_id=" + cid;
+let url2 = "https://api.twitch.tv/kraken/channels/" + channel2 + "?client_id=" + cid;
+
+
+  /*this code is for displaying freeCodeCamp link in center*/
+
+$.getJSON(url1).done(function(data){
+  //console.log(data.logo);
+  if (data.stream === null){
+    $("#fcc").html(" is offline");
+  }
+  else {
+    $("#fcc").html(" is ONLINE!");  
+  }
+});
+
+  /* this code is for getting api information*/
+  $.getJSON(url2).done(function(data5){
+    //console.log(data5);
+  });
+
+
+for (let i = 0; i < chaArray.length; i++) {
+ urlChannel = urlChannel + chaArray[i];
   console.log("la url queda: " + urlChannel);
 
 
   $.ajax({
-  url: urlChannel,
-  method: 'GET',
+ 
+  type: 'GET',
+  url: "https://api.twitch.tv/kraken/channels/" + chaArray[i],
+  headers: {"Client-ID": cid },
 
-  success: function(data){
+  success: function(data1){
     if(data.stream !== null){
       console.log(data);
      logo = data.stream.channel.logo;
@@ -44,7 +71,6 @@ for (var i = 0; i < channel.length; i++) {
 
 
 
-  urlChannel = 'https://crossorig.in/https://wind-bow.glitch.me/twitch-api/streams/';
 }
 });
 

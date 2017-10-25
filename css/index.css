@@ -1,3 +1,6 @@
+body {
+  background-image: url("../img/bg-10-full.jpg");
+}
 img{
   height: 70px;
   width: 70px;
@@ -6,10 +9,29 @@ img{
 .channel{
   display: flex;
   flex-direction: row;
-  background-color: lightgray;
+  /* background-color: rgba(180, 181, 184, 0.235);
+  border-radius: 10px; */
 }
 
-.channel h3 {
-  height: 20px;
-padding-top: 20px;
+.displ li, .stateList li {
+  margin:0;
+  padding: 10px;
+list-style-type: none;
+display: inline;
+}
+
+.displ li{
+ margin: 7em;
+}
+.stateList li, .channel{
+  border-radius: 7px;  
+  background-color: rgba(180, 181, 184, 0.358);
+  
+}
+.green{
+  color: rgb(24, 157, 24);
+}
+.red{
+  color: rgb(230, 44, 44);
+  
 }
