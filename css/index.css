@@ -1,5 +1,9 @@
 body {
   background-image: url("../img/bg-10-full.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 img{
   height: 70px;
@@ -9,6 +13,7 @@ img{
 .channel{
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
   /* background-color: rgba(180, 181, 184, 0.235);
   border-radius: 10px; */
 }
@@ -21,7 +26,7 @@ display: inline;
 }
 
 .displ li{
- margin: 7em;
+ margin: 5em;
 }
 .stateList li, .channel{
   border-radius: 7px;  
