@@ -15,7 +15,6 @@ const url1 = "https://api.twitch.tv/kraken/streams/" + channelFreeCode + "?clien
 
 fetch(url1)
 .then((data)=>{
-  //console.log(data.logo);
   (data.stream === null)?
   $("#fcc").html(" is offline"):$("#fcc").html(" is ONLINE!")
 });
@@ -24,79 +23,15 @@ fetch(url1)
   let  datos, channel2 = chaArray[i], url2 = "https://api.twitch.tv/kraken/channels/" + channel2 + "?client_id=" + cid;
   fetch(url2)
   .then(data5 => data5.json())
-  .then((json) => {console.log(json)
-    //$("#display").append()
-    //console.log(data5)
+  .then((json) => {  
+       $("#display").append('<div class="channel"><ul class="displ"><li><img src="'+ json.logo+'" alt="cahnnel logo"></li><li><a href="'+ json.url+'" target="_blank">'+ json.display_name+'</a></li><li> <span>'+ json.status+'</span></li></ul></div>')
+      })
 
-    // fetch(url)
-    // .then(data => data.json())
-    // .then(json => console.log(json))
- 
-  // .then(
-  //   (datos)=>{
-      
-       $("#display").append('<div class="channel"><ul class="displ"><li><img src="'+ json.logo+'" alt="cahnnel logo"></li><li><a href="'+ json.url+'" target="_blank">'+ json.display_name+'</a></li><li> <span>'+ json.status+'</span></li></ul></div>')})
-  //   }
-  // )
-
- 
 // --aca cierra el for ----------
  }
-
+$(".green").click(
+  
+);
 
 // ------- aca cierra el .ready-------
 });
-
-
-// for (let i = 0; i < chaArray.length; i++) {
-//  urlChannel = urlChannel + chaArray[i];
-//   console.log("la url queda: " + urlChannel);
-
-
-//   $.ajax({
- 
-//   type: 'GET',
-//   url: "https://api.twitch.tv/kraken/channels/" + chaArray[i],
-//   headers: {"Client-ID": cid },
-
-//   success: function(data1){
-//     if(data.stream !== null){
-//       console.log(data);
-//      logo = data.stream.channel.logo;
-//      console.log('el logo es: ' + data.stream.channel.logo);
-//      display_name = data.stream.channel.display_name;
-//      status = data.stream.channel.status;
-//     $('.channels').append("<div><div class='col-md-4'><img src="+ logo +"></div><div class='col-md-4'>" + display_name+ "</div><div class='col-md-4'>" + status+ "</div></div>");
-//   } else {
-//     logo = "Image not found";
-
-//     display_name = channel[i];
-//     console.log(channel[i]);
-//     console.log(display_name);
-//     status = 'OFFLINE';
-//    $('.channels').append("<div class='chan col-md-12'><div class='col-md-4'><img src="+ logo +" ></div><div class='col-md-4'>" + display_name+ "</div><div class='col-md-4'>" + status+ "</div></div>");
-//   }
-
-  // $('.channels').append("<div><div class='col-md-4'><img src="+ logo +"></div><div class='col-md-4'>" + display_name+ "</div><div class='col-md-4'>" + status+ "</div></div>");
-  // if (data.stream !== null) {
-  //
-  //   // $('.channels').append('appendea viteh!');
-  // }
-  // console.log(data);
-//   }
-
-//   });
-
-
-
-
-// }
-// });
-
-
-
-
-
-
-
-
