@@ -5,12 +5,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-img{
+img {
   height: 70px;
   width: 70px;
   margin: 20px;
 }
-.channel{
+.channel {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
@@ -18,25 +18,28 @@ img{
   border-radius: 10px; */
 }
 
-.displ li, .stateList li {
-  margin:0;
+.displ li,
+.stateList li {
+  margin: 0;
   padding: 10px;
-list-style-type: none;
-display: inline;
+  list-style-type: none;
+  display: inline;
 }
 
-.displ li{
- margin: 5em;
+.displ li {
+  margin: 5em;
 }
-.stateList li, .channel{
-  border-radius: 7px;  
+.stateList li,
+.channel {
+  border-radius: 7px;
   background-color: rgba(180, 181, 184, 0.358);
-  
 }
-.green{
+.stateList a {
+  text-decoration: none;
+}
+.green {
   color: rgb(24, 157, 24);
 }
-.red{
+.red {
   color: rgb(230, 44, 44);
-  
 }
