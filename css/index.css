@@ -10,14 +10,31 @@ img {
   width: 70px;
   margin: 20px;
 }
-.channel {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  /* background-color: rgba(180, 181, 184, 0.235);
-  border-radius: 10px; */
+ul li {
+  list-style-type: none;
+  display: inline;
 }
-
+.board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.channel,
+.stateList a {
+  border-radius: 7px;
+  background-color: rgba(180, 181, 184, 0.358);
+}
+.but {
+  margin-top: 5em;
+  margin-left: -25em;
+}
+.channel p {
+  margin-left: 3em;
+}
+.channel {
+  margin-top: 2em;
+  width: 40em;
+}
 .displ li,
 .stateList li {
   margin: 0;
@@ -29,17 +46,6 @@ img {
 .displ li {
   margin: 5em;
 }
-.stateList li,
-.channel {
-  border-radius: 7px;
-  background-color: rgba(180, 181, 184, 0.358);
-}
 .stateList a {
-  text-decoration: none;
-}
-.green {
-  color: rgb(24, 157, 24);
-}
-.red {
-  color: rgb(230, 44, 44);
+  padding: 1em;
 }
